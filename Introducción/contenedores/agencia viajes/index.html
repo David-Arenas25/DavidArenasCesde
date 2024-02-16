@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+       #container{
+        background-color: pink;
+       }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="banner" class="banner-navbar-footer">
+        <img src="./images/descarga.jpg" 
+        width="100%" 
+        height="100%" 
+        style="border-radius: 10px;">
+
+      </div>
+      <div id="navbar" class="banner-navbar-footer">
+        <div class="topnav" id="myTopnav">
+          <a href="index.html" class="active">Inicio</a>
+          <a href="#">Noticias</a>
+          <a href="#">Contactenos</a>
+          <div class="dropdown">
+            <button class="dropbtn">Movimiento 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Cartera</a>
+              <a href="#">Nómina</a>
+              <a href="#">Facturación</a>
+              <a href="">Presupuesto</a>
+            </div>
+          </div> 
+          <a href="#about">Nosotros</a>
+          <a href="">Servicios</a>
+          <a href="">Conectar</a>
+
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        
+        
+
+      </div>
+      <div id="text" class="text-images-video wrapped">
+        <p >
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, porro saepe. Minus ipsa corporis quae, autem ad aut fugit doloremque exercitationem rem, repellat ipsam tempora mollitia recusandae tempore incidunt nostrum.
+          Ab commodi obcaecati minus beatae quod, distinctio dicta qui impedit doloribus est voluptates suscipit esse tempore quae modi excepturi unde blanditiis quas, architecto ad in inventore saepe. Explicabo, laboriosam neque.
+          Expedita dolores numquam reiciendis eum pariatur illo ipsa natus hic molestiae? Et velit qui minus, pariatur, nisi aspernatur ipsam cum architecto fuga sequi corporis laboriosam porro! Fugit, voluptate. Sint, tempora.
+          Iste quasi consequatur cum exercitationem magnam possimus rerum, vitae veritatis nostrum, optio, incidunt culpa nihil reprehenderit voluptatum similique quae unde explicabo ea repellat eligendi nisi sapiente molestias officiis. Non, explicabo.
+          Quibusdam eum quam delectus asperiores necessitatibus autem ullam aliquam quae sequi fugiat, dolor illo odio excepturi blanditiis. Officia sit, veniam delectus fugiat maxime magnam repellat iusto temporibus? Eaque, sed veritatis?
+        </p>
+
+      </div>
+      <div id="images" class="text-images-video wrapped">
+        <div id="img1">
+
+        </div>
+        <div id="img2">
+
+        </div>
+      </div>
+      <div id="video" class="text-images-video wrapped">
+
+      </div>
+      <div id="footer" class="banner-navbar-footer wrapped">
+        <div id="company">
+
+        </div>
+        <div id="socialnetwork">
+
+        </div>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+  </body>
+</html>

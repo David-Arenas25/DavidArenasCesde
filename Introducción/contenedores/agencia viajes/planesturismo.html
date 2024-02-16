@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agencia de turismo - El paisa</title>
+  </head>
+  <body>
+    <table align="center">
+      <caption>
+        Planes de turismo
+      </caption>
+      <form>
+        <tr>
+          <td>
+            <label for="fullname">Nombre Completo</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              required
+              autofocus
+              autocomplete="off"
+              id="fullname"
+              name="fullname"
+              placeholder="Ingrese nombre completo"
+              size="30"
+              maxlength="30"
+              minlength="7"
+              pattern="[A-Za-záÁÉéÍíÓóÚúñÑ\s]+"
+              title="El nombre completo es obligatorio. Ingrese solo letras y/o espacios, minimo 7, maximo 30"
+            />
+            <tr>
+              <td>
+                <label for="email">Correo Electronico</label>
+              </td>
+              <td>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="off"
+                  pattern="[a-zA-Z0-9!#$%&'*\/=?^_\{\|\}~\+\-]([\.]?[a-zA-Z0-9!#$%&'*\/=?^_\{\|\}~\+\-])+@[a-zA-Z0-9]([^@&%$\/\(\)=?¿!\.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="target"> Destino </label>
+              </td>
+              <td>
+                <select name="target" id="target" >
+                  <option 
+                  value="none"
+                  selected
+                  disabled
+                  >Seleccione un destino</option>
+                  <option value="santamarta">Santa Marta</option>
+                  <option value="cartagena">Cartagena</option>
+                  <option value="medellin">Medellín</option>
+                  <option value="rioacha">Riohacha</option>
+
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="departuredate"> Fecha Salida</label>
+              </td>
+              <td>
+                <input 
+                type="date"
+                id="departuredate"
+                name="departuredate"
+                min="2024-01-17"
+                max="2024-06-30">                              
+              </td>              
+            </tr>
+            <tr>
+              <td>
+                <label for="returndate">Fecha Regreso</label>
+              </td>
+              <td>
+                <input 
+                type="date"
+                id="returndate"
+                name="returndate"
+                min="2024-01-17"
+                max="2024-01-31"> 
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="numberofpeople">Número De Personas</label>
+              </td>
+              <td>
+                <input 
+                type="number"
+                name="numberofpeople"
+                id="numberofpeople"
+                min="1"
+                max="12">
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <label for="waytopay">Forma De Pago</label>
+              </td>
+              <td>
+                <input 
+                type="radio" 
+                name="waytopay" 
+                id="cash">Efectivo <br>
+                <input 
+                type="radio" 
+                name="waytopay" 
+                id="creditcard">Tarjeta Débito <br>
+                <input 
+                type="radio" 
+                name="waytopay" 
+                id="creditcard">Tarjeta Crédito
+              </td>
+            </tr>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" colspan="2">
+            <!-- <input type="submit" value="enviar"> -->
+            <button 
+            type="submit" 
+            id="send" 
+            name="send">
+            Enviar
+          </button>
+
+            <button 
+            type="reset" 
+            id="reset" 
+            name="reset">
+            Limpiar
+          </button>
+          </td>
+        </tr>
+      </form>
+    </table>
+  </body>
+</html>

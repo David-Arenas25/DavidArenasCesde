@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarea</title>
+</head>
+<body>
+    <form>
+    
+        <table border align="center">
+            <caption>Planes de turismo</caption>       
+            <tbody>
+                
+                <tr><td><label for="name">Nombre Completo</label></td>
+                <td><input type="text" id="name" name="name" required placeholder="Ingrese su nombre completo" minlength="3" maxlength="7" title="Ingrese solo letras, minimo 3 máximo 7" pattern="/^[A-Za-z]+ [A-Za-z]+$/" autofocus></td></tr>
+                <tr></tr>
+                <td><label for="email">Correo Electrónico</label>
+                </td><td><input type="email" required pattern="[a-zA-Z0-9!#$%&'*\/=?^_\{\|\}~\+\-]([\.]?[a-zA-Z0-9!#$%&'*\/=?^_\{\|\}~\+\-])+@[a-zA-Z0-9]([^@&%$\/\(\)=?¿!\.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?" title="ingrese un correo con formato example@dominio.com" autocomplete="off"></td><tr>
+                
+                <tr><td><label for="destination">Destino</label></td>
+                <td><select name="destination" id="destination" ><option value="none" selected disabled>Selecicone un destino</option>
+                <label for="medellin" id="medellin"></label>
+                <option value="medellin">Medellín</option>
+                <option value="cartagena">Cartagena</option>
+                <option value="santamarta">Santa Marta</option>
+                <option value="sanandres">San Andrés</option>
+                <option value="vichada">Vichada</option>
+            </select>
+            <tr><td><label for="departuredate">Fecha salida</label></td>
+            <td><input type="date" name="departuredate" id="departuredate" min="2024-01-17" max="2024-06-17"></td></tr>    
+            <tr><td><label for="returndate">Fecha Regreso</label></td>
+                <td><input type="date" name="returndate" id="departuredate" min="2024-01-17" max="2024-06-17"></td></tr>
+            <tr><td><label for="numberofpeople">Número de personas</label></td>            
+                <td><input type="number" name="numberofpeople" id="numberofpeople" min="1" max="10" title="mínimo una persona, máximo 10"></tr></td>
+                <tr><td><label for="paymentmethod">Medio de pago</label></td>
+                <td><input type="radio" name="paymentmethod" id="cash">Efectivo <br>
+                <input type="radio" name="paymentmethod" id="debitcard">Tarjeta Débito <br>
+                <input type="radio" name="paymentmethod" id="creditcard">Tarjeta Crédito</td></tr>
+            <tr>
+                <td align="center" colspan="2"><button type="submit">Enviar</button>
+                <button type="reset">Clear</button></td></tr>
+                <tr>            
+                <td align="center"><label for="extra">Extras</label></td>
+                    <td>
+                    <input type="checkbox" name="extra" id="caminata">Caminata <br>
+                    <input type="checkbox" name="extra" id="tourporlaciudad">Tour por la ciudad<br>
+                    <input type="checkbox" name="destination">Visitar la isla</tr>
+                    <tr><td colspan="2" align="center"><label for="comment">Comentario</label></td></tr>
+                    <tr><td align="center" colspan="2"><input type="text" name="comment" id="comment" size="100"></td></tr>
+                        
+
+                    
+              
+                
+            
+                
+            </tbody>
+        </table>
+    </form>
+    
+</body>
+</html>
