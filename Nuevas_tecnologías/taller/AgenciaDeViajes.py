@@ -3,18 +3,13 @@ personasGuajira = 0
 totalNiños = 0
 totalAdultos = 0
 totalguajira = 0
-
-nombre = 0
-niños = 0
-subtotal = 0
-
 personasLlanos = 0
 personasCanon = 0
 
 totalLlanos = 0
 totalCanon = 0
 
-for i in range (10):
+for i in range(2):
     menu = input(f"""
             a donde quieres viajar -->
             1- La guajira
@@ -31,37 +26,32 @@ for i in range (10):
 
         destino= 'La Guajira'
         subtotalAdultos = adultos * 1450000
-
         subtotalNiños = niños*870000
-
         subtotal = subtotalNiños + subtotalAdultos
-
         personasGuajira += niños + adultos
-        totalNiños += niños
-        totalAdultos += adultos
         totalguajira += subtotal
+
+
     elif menu == "2":
         destino = 'El cañón de Chicamocha'
         subtotalAdultos = adultos * 1600000
         subtotalNiños = niños * 960000
-
-        subtotalCanon = subtotalNiños + subtotalAdultos
-
+        subtotal = subtotalNiños + subtotalAdultos
         personasCanon += niños + adultos
-        totalNiños += niños
-        totalAdultos += adultos
-        totalCanon += subtotalCanon
+        totalCanon += subtotal
+
+
     elif menu == "3":
         destino = 'Los Llanos Orientales'
         subtotalAdultos = adultos * 1200000
         subtotalNiños = niños * 720000
-
-        subtotalLlanos = subtotalNiños + subtotalAdultos
-
+        subtotal = subtotalNiños + subtotalAdultos
         personasLlanos += niños + adultos
-        totalNiños += niños
-        totalAdultos += adultos
-        totalLlanos += subtotalLlanos
+        totalLlanos += subtotal
+
+
+    totalNiños += niños
+    totalAdultos += adultos
 
     print(f"""
     nombre {nombre}
@@ -69,6 +59,7 @@ for i in range (10):
     adultos {adultos}
     niños {niños}
     subtotal {subtotal}""")
+
 
 totalDinero = totalCanon + totalLlanos + totalguajira
 
