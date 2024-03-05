@@ -1,9 +1,9 @@
-
 import random
 from datetime import datetime
 
 registerList = []
 register = {}
+
 
 def operaciones():
     fecha = datetime.now()
@@ -16,14 +16,14 @@ def operaciones():
         ╔═══════════════════════════════════════════╗
         ║ **Operaciones Bancarias**                 ║
         ╚═══════════════════════════════════════════╝
-        
+
         1. Consultar Saldo
         2. Retirar
         3. Consignar
         4. Cambiar Clave
         5. Consultar Movimientos
         6. Salir
-        
+
         """)
 
         opc = int(input())
@@ -108,13 +108,13 @@ def login():
                 print("Acceso concedido")
                 operaciones()
                 break
-            elif contador == 3:
-                print("CUENTA BLOQUEADA CONTÁCTESE CON EL CALL CENTER")
-                opc = 4
+
             else:
                 print("valide sus credenciales")
-                break
-
+                print("intento numero", contador, "le quedan", 3 - contador, "intentos")
+        if contador == 3:
+                print("CUENTA BLOQUEADA CONTÁCTESE CON EL CALL CENTER")
+                opc = 4
 
 def registro():
     print(f"""
