@@ -1,56 +1,30 @@
 package poo;
+
+import java.sql.SQLOutput;
+
 public class Menu extends Persona {
+    int opc = 0;
+    public int  Menu(){
 
-    Estudiante estudiante = new Estudiante();
-    Profesor profesorCesde = new Profesor();
-    Persona persona = new Persona();
-    Administrativo adm = new Administrativo();
+        while (opc !=4){
 
-    Curso curso = new Curso();
-    public int myMenu() {
-        int opc = 0;
-        while (opc != 4) {
-            System.out.println("Bienvenido ingrese una opción");
-            System.out.println("1.Estudiante 2.Administrador 3.Profesor");
+            System.out.println("Bienvenido a la app Notas");
+            System.out.println("Elija una opción");
+            System.out.println("1.Estudiante 2.Profesor 3.Administrador 4.Salir");
             opc = sc.nextInt();
-            sc.nextLine();
 
-            switch (opc) {
-                case 1:
-                    System.out.println("Elijio estudiante");
-                    estudiante.registrarUsuario();
-                    break;
-                case 2:
-                    System.out.println("Elijio administrador");
-                    adm.registrarUsuario();
-                    break;
-                case 3:
-                    System.out.println("Elijio profesor");
-                    profesorCesde.registrarUsuario();
-                    break;
-
-                default:
-                    System.out.println("ingrese una opción valida");
-                    break;
-            }
-            persona.registrarUsuario();
-            persona.iniciarSesion();
-            persona.consultarUsuario(persona.login);
-            if (opc == 2){
-                System.out.println("Cree un curso");
-                System.out.println();
-                curso.crearCurso();
-                System.out.println("El curso creado fue...");
-                curso.consultarCurso();
+            if (opc >0 && opc <4){
+                break;
+            }else if (opc <0 && opc >=5){
+                System.out.println("elija una opcion válida");
+            }else {
+                System.out.println("Hasta pronto");
 
             }
-
 
 
         }
         return opc;
 
     }
-
-
 }

@@ -10,32 +10,21 @@ public class Curso extends Persona {
 
     String profesor;
 
-    String [] cursos = new String[5];
-
 
     //metodos
 
-    public void crearCurso() {
-
-        System.out.println("ingrese el id del curso");
+    public void crearCurso(){
+        System.out.println("Ingrese la id del curso");
         idCurso = sc.nextInt();
         sc.nextLine();
-        System.out.println("ingrese el nombre del curso");
+        System.out.println("Ingrese el nombre del curso");
         nombreCurso = sc.nextLine();
-        System.out.println("ingrese numero de creditos");
+        System.out.println("Ingrese los creditos del curso");
         creditos = sc.nextInt();
         sc.nextLine();
-        System.out.println("Ingrese el horario");
-        horario = sc.nextLine();
         System.out.println("Ingrese el profesor");
         profesor = sc.nextLine();
 
-
-        cursos[0] = String.valueOf(idCurso);
-        cursos[1] = nombreCurso;
-        cursos[2] = String.valueOf(creditos);
-        cursos[3] = horario;
-        cursos[4] =profesor;
 
 
 
@@ -43,9 +32,11 @@ public class Curso extends Persona {
 
     public void consultarCurso(){
 
-        for (String i : cursos){
-            System.out.println(i);
-        }
+        System.out.println("El curso registrado es el siguiente");
+        System.out.println("id del curso " + idCurso);
+        System.out.println("Nombre del curso "+ nombreCurso);
+        System.out.println("Creditos del curso " + creditos);
+        System.out.println("Profesor "+ profesor);
 
 
     }

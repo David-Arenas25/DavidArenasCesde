@@ -2,8 +2,26 @@ package poo;
 
 public class Profesor extends  Persona{
 
-    String especialidad;
+    private String especialidad;
 
+    // COnstructor
+
+
+    public Profesor(){
+
+        super();
+    }
+
+    // Getters and setters
+
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
 
     @Override
     public void registrarUsuario() {
