@@ -62,8 +62,5 @@ create procedure pagarFactura
 @id_factura int,
 @valor_pago float
 as
-update factura set estado = 'pagado' where id_factura = @id_factura and (select saldo_cliente from cliente where id_cliente = @id_cliente) >= valor_Factura
-update cliente set saldo_cliente = saldo_cliente - @valor_pago where id_cliente = @id_cliente and (select valor_factura from factura
-where id_factura = @id_factura) = @valor_pago
-
-
+update cliente set saldo_cliente = saldo_cliente - @valor_pago where id_cliente = @id_cliente and saldo_cliente >= @valor_pago and @valor_pago = (select valor_Factura from factura where id_factura = @id_factura) and (select estado from factura where id_factura = @id_factura) is null
+update factura set estado = 'pagado' where id_factura = @id_factura and valor_factura = @valor_pago and id_cliente = @id_cliente and estado is null

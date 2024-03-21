@@ -1,17 +1,17 @@
-public class Consulta extends Producto {
+public class ConsultaProducto extends Producto {
      private String[] myArray = new String[1];
      private String id;
      private int stock;
      double precio;
 
-    public Consulta(String[] myArray, String id, int stock, double precio) {
+    public ConsultaProducto(String[] myArray, String id, int stock, double precio) {
         this.myArray = myArray;
         this.id = id;
         this.stock = stock;
         this.precio = precio;
     }
 
-    public Consulta() {
+    public ConsultaProducto() {
         super();
         this.myArray = myArray;
         this.id = id;
