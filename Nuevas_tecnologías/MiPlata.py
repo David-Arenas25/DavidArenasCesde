@@ -33,26 +33,10 @@ def operaciones():
                 print("su saldo es ", i['saldo'])
 
         elif opc == 2:
-            retiros = {}
-            retiros['retiro'] = float(input("cuanto va a retirar?"))
-            retiros['fecha'] = fecha.strftime('%Y-%m-%d')
-            for i in registerList:
-                if i['saldo'] > retiros['retiro']:
-                    i['saldo'] -= retiros['retiro']
-                    listaRetiros.append(retiros)
-                    print("retiro ", retiros, "y su saldo quedo en ", (i['saldo']))
-
-                else:
-                    input("saldo insuficiente")
+            Retiro.realizarRetiro()
 
         elif opc == 3:
-            consignas = {}
-            consignas['consigna'] = float(input("cuanto va a consignar?"))
-            consignas['fecha'] = fecha.strftime('%Y-%m-%d')
-            listaConsig.append(consignas)
-            for i in registerList:
-                i['saldo'] += consignas['consigna']
-                print("consignacion de  ", consignas['consigna'], "y su saldo quedo en ", (i['saldo']))
+            Consigna.realizarConsignacion()
 
         elif opc == 4:
             oldPassword = " "
@@ -143,37 +127,6 @@ def registro():
     print(registerList)
 
 
-def menu():
-    opc = 0
-    while opc != 4:
-        print("""
-        ╔══════════════════════════════════════╗
-        ║  Bienvenido al Cajero Automático Mi  ║
-        ║                 Plata                ║
-        ╠══════════════════════════════════════╣
-        ║              Opciones:               ║
-        ║                                      ║
-        ║          1. Registrarse              ║
-        ║          2. Ingresar                 ║
-        ║          3. Saldos y Movimientos     ║
-        ║          4. Salir                    ║
-        ║                                      ║
-        ║                                      ║
-        ╚══════════════════════════════════════╝
-        """)
-        opc = int(input('->'))
-        if opc == 1:
-            registro()
-        elif opc == 4:
-            print("Hasta pronto")
-        else:
-            if register == {} and registerList == []:
-                print("No hay registros")
-            else:
-                if opc == 2:
-                    login()
-                elif opc == 3:
-                    operaciones()
 
 
 if __name__ == '__main__':
