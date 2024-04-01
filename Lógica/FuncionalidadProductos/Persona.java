@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Persona {
 
-    privagte Scanner sc = new Scanner(System.in);
+     Scanner sc = new Scanner(System.in);
 
      private int id;
      private String nombre;
